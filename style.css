@@ -1,0 +1,156 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --softMagenta: hsl(300, 69%, 71%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(./images/bg-mobile.svg);
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: var(--violet);
+  min-height: 100vh;
+}
+
+header {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+header img {
+  display: block;
+  height: 2rem;
+  margin: auto 0;
+}
+section {
+  margin: 2rem;
+  color: var(--white);
+}
+section.photo img {
+  width: 100%;
+}
+section.container {
+  text-align: center;
+}
+.container__title {
+  margin: 1rem;
+}
+.container__description {
+  margin: 1rem;
+  font-size: 1rem;
+}
+.container__btn {
+  text-decoration: none;
+  display: inline-block;
+  color: var(--violet);
+  background-color: var(--white);
+  margin: 1rem;
+  padding: 0.75rem 4rem;
+  border-radius: 2rem;
+  transition: 1s;
+}
+.container__btn:hover {
+  color: white;
+  background: var(--softMagenta);
+}
+
+footer {
+  padding: 1rem;
+  color: var(--white);
+  margin: 0.5rem 0;
+  text-align: center;
+}
+.footer__socialbar {
+  margin-bottom: 3rem;
+}
+.footer__socialbar a {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  fill: var(--white);
+}
+.footer__socialbar a:hover {
+  border: solid 1px var(--softMagenta);
+}
+.footer__socialbar a svg path:hover {
+  fill: var(--softMagenta);
+}
+footer .attribution a {
+  color: var(--white);
+  text-decoration: none;
+}
+@media only screen and (min-width: 55rem) {
+  body {
+    background-image: url(./images/bg-desktop.svg);
+    padding: 0 1rem;
+    background-size: cover;
+  }
+  header img {
+    height: 3rem;
+  }
+  main {
+    display: flex;
+  }
+  section.photo {
+    width: 50%;
+  }
+  section.container {
+    width: 50%;
+    text-align: left;
+  }
+  .container__title {
+    font-size: 2rem;
+  }
+  .container__description {
+    font-size: 1rem;
+  }
+  footer {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+  }
+  .footer__socialbar {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 84rem) {
+  header {
+    padding: 1rem;
+    margin: 0 1rem;
+  }
+  .container__title {
+    margin: 1rem 0;
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+  .container__description {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+}
